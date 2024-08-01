@@ -1,1 +1,1 @@
-# godkpress.gitgub.io
+# godkpress.github.io
