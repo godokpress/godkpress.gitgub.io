@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF; /* Default to white background */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px); /* Adjust to leave space for the footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.duck {
+    position: absolute;
+    bottom: 120px; /* Adjust this value to move the duck up or down */
+    width: 100px;
+    height: auto;
+    animation: moveDuck 5s infinite ease-in-out;
+}
+
+.logo {
+    position: absolute;
+    top: 50px; /* Adjust this value to move the logo down */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Adjust as needed */
+    height: auto;
+}
+
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden; /* Hides overflowing waves */
+    line-height: 0;
+}
+
+.wave-container svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px; /* Adjust this value to change wave height */
+}
+
+.parallax > use {
+    animation: moveWaves 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+/* Define wave fill color for light and dark modes */
+.wave-fill {
+    fill: rgba(128, 128, 128, 0.5); /* Light mode: gray with some transparency */
+}
+
+/* Hide dark-mode images by default */
+.dark-mode {
+    display: none;
+}
+
+/* Show dark-mode images and waves in dark mode */
+@media (prefers-color-scheme: dark) {
+    body, html {
+        background-color: #000000; /* Change to dark background */
+    }
+    .light-mode {
+        display: none;
+    }
+    .dark-mode {
+        display: block;
+    }
+    .wave-fill {
+        fill: rgba(255, 255, 255, 0.5); /* Dark mode: white with some transparency */
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #FFFFFF; /* Background color to make it distinct */
+}
+
+.instagram-link {
+    color: #000000; /* Icon color */
+    font-size: 24px; /* Icon size */
+    text-decoration: none;
+}
+
+.instagram-link:hover {
+    color: #E1306C; /* Instagram brand color on hover */
+}
+
+@keyframes moveDuck {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes moveWaves {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
