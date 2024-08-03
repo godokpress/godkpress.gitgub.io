@@ -28,13 +28,6 @@ body, html {
     animation: moveDuck 5s infinite ease-in-out;
 }
 
-.intro-text {
-    text-align: center;
-    font-size: 1.2em;
-    margin: 20px 0;
-    color: #333;
-}
-
 .logo {
     position: absolute;
     top: 50px; /* Adjust this value to move the logo down */
@@ -43,6 +36,24 @@ body, html {
     width: 200px; /* Adjust as needed */
     height: auto;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-text {
+    text-align: center;
+    font-size: 1em;
+    margin: 0; /* 기본 여백 제거 */
+    color: #333;
+    line-height: 1.5; /* 줄 간격 조절 */
+    position: relative;
+    top: -150px; /* 위로 10픽셀 이동 */
+}
+
 
 .wave-container {
     position: absolute;
