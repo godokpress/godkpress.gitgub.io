@@ -28,6 +28,13 @@ body, html {
     animation: moveDuck 5s infinite ease-in-out;
 }
 
+.intro-text {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: #333;
+}
+
 .logo {
     position: absolute;
     top: 50px; /* Adjust this value to move the logo down */
