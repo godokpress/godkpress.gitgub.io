@@ -138,6 +138,14 @@ footer {
     color: #E1306C; /* Instagram brand color on hover */
 }
 
+
+@media (prefers-color-scheme: dark) {
+    .intro-text {
+        color: white;
+    }
+}
+
+
 @keyframes moveDuck {
     0%, 100% {
         transform: translateY(0);
